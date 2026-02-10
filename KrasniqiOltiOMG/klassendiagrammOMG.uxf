@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>150</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>_Programm_
+--
+_model:IModel_
+_view:View_
+_controller:IController_
+--
+_Main()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>350</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+-view:IView
+
+-Zahl1:int
+-Zahl2:int
+
+--
++ggTBerechnen(Zahl1:int,Zahl2:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>600</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Controller
+--
++setView(View:IView)
+
++ggTBerechnen(Zahl1:int,Zahl2:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>530</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>350</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>View
+--
+-controller:IController
+-labelTextBox
+-textBoxDatensatz:Textbox
+--
++buttonGgTBerechnen_Click(sender:object,e:EventAugs)
++anzeigen(ggT:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>530</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>600</y>
+      <w>360</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+View
+--
++setController(Controller:IController
+
++buttonGgTBerechnen_Click(sender:object,e:EventAugs)
++anzeigen(ggT:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
