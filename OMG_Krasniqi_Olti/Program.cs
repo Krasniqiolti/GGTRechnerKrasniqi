@@ -20,6 +20,8 @@ namespace OMG_Krasniqi_Olti
             controller.setView(view);
 
             Application.Run(view);
+
+            //Chshid war hier
         }
     }
 }
