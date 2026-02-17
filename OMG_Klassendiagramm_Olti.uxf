@@ -4,58 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>90</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-IController
---
-
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>10</x>
-      <y>90</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>Controller
---
-- view:IView
-- model:IModel
---
-+ Controller(model:IModel)
-+ setView(view:IView):void
-+ GgtBerechnen(zahl1:int,zahl2:int):int</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>560</x>
-      <y>550</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>Programm
-
---
-
-
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>310</y>
+      <x>70</x>
+      <y>260</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -69,8 +19,8 @@ IController
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>320</y>
+      <x>80</x>
+      <y>500</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -85,44 +35,112 @@ IModel
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>570</y>
-      <w>210</w>
+      <x>420</x>
+      <y>20</y>
+      <w>230</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-IView
+    <panel_attributes>_Programm_
 --
-
-
-</panel_attributes>
+_model:IModel_
+_view:View_
+_controller:IController_
+--
+_Main()_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>560</y>
+      <x>860</x>
+      <y>260</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+-view:IView
+-model:IModel
+-Zahl1:int
+-Zahl2:int
+
+--
++ Controller(model:IModel)
++ setView(view:IView):void
++ ggtBerechnen(zahl1:int,zahl2:int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>520</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>View
-
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IController
 --
++setView(View:IView)
 
-
---</panel_attributes>
++ggTBerechnen(Zahl1:int,Zahl2:int)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>180</y>
-      <w>80</w>
-      <h>30</h>
+      <x>980</x>
+      <y>440</y>
+      <w>30</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>260</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>View
+--
+-controller:IController
+-labelTextBox
+-textBoxDatensatz:Textbox
+--
++buttonGgTBerechnen_Click(sender:object,e:EventAugs)
++anzeigen(ggT:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>440</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>510</y>
+      <w>360</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IView
+--
++setController(Controller:IController
+
++buttonGgTBerechnen_Click(sender:object,e:EventAugs)
++anzeigen(ggT:int)</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
