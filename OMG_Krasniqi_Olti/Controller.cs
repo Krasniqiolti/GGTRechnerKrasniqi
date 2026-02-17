@@ -19,5 +19,6 @@
         {
             return model.Ggt(zahl1, zahl2);
         }
+        //nick war hier
     }
 }
